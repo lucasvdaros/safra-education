@@ -21,17 +21,14 @@ export class LoginService {
   }
 
   private decodeAndNotify(): void {
-    const token = this.tokenService.getToken();
-    // const admin = jwt_decode(token);
+    const token = this.tokenService.getToken();   
   }
 
   logout(): void {
-    this.tokenService.removeToken();
-    // this.userSubject.next(null);
+    this.tokenService.removeToken();    
   }
 
   isLogged(): boolean {
-
     return this.tokenService.hasToken();
   }
 }

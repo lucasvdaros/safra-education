@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-const KEY = 'authToken';
+const KEY = 'safraToken';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,6 @@ const KEY = 'authToken';
 export class TokenService {
 
   hasToken(): boolean {
-
     return !!this.getToken();
   }
 

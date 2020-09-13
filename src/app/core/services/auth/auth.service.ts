@@ -1,6 +1,6 @@
-import { ApiToken } from './../models/apiToken';
-import { environment } from './../../../environments/environment';
-import { LoginService } from './../services/login/login.service';
+import { ApiToken } from '../../models/apiToken';
+import { environment } from '../../../../environments/environment';
+import { LoginService } from '../login/login.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
@@ -20,7 +20,7 @@ export class AuthService {
   authenticate(login: string, password: string) {
 
     return this.http.post(
-      `${environment.apiUrl}/api/Login/`, { login, password })
+      `${environment.apiUrl}/safra-education-api/User/login`, { login, password })
       .pipe(
         tap((token: any) => {
 

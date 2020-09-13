@@ -19,14 +19,7 @@ export class BaseLayoutComponent implements OnInit {
       iconName: 'home',
       url: ['', '/'],
       isActive: false
-    },
-    {
-      id: 2,
-      title: 'Notícias',
-      iconName: 'inbox',
-      url: ['/', 'noticias'],
-      isActive: false,      
-    },
+    },    
   ];
 
   sideBarOpen = false;  

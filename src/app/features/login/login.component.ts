@@ -1,8 +1,10 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ThemeService } from 'src/app/base-layout/services/theme.services';
 import { first } from 'rxjs/operators';
+
+import { ThemeService } from 'src/app/base-layout/services/theme.services';
+import { AuthService } from '../../core/services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private themeService: ThemeService,    
+    private themeService: ThemeService,
+    private authService: AuthService,    
     private router: Router
   ) { }
 
@@ -37,7 +40,20 @@ export class LoginComponent implements OnInit {
   login(): void {
 
     const username = this.loginForm.get('username').value;
-    const password = this.loginForm.get('password').value;    
+    const password = this.loginForm.get('password').value;
+    
+    this.authService
+      .authenticate(username, password)
+      .subscribe(
+        () => {
+          this.themeService.setTheme(this.prevDark);
+          this.router.navigate(['']);
+        },
+        err => {
+          this.loginForm.reset();
+          console.log(err);
+        }
+      );
   }
 
   logOut(): void {
