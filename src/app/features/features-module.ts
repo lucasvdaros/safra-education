@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
 
 import { FeaturesRoutingModule } from "./features-routing.module";
 import { SharedModule } from "../shared/shared.module";
@@ -24,7 +25,8 @@ import { CardMorningComponent } from './dashboard/components/card-morning/cardmo
     CommonModule,
     FeaturesRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
   ],
   exports: [
   ]
