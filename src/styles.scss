@@ -1,0 +1,205 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$painel-blue: (
+  50 : #e0e5ff,
+  100 : #b3beff,
+  200 : #8093ff,
+  300 : #4d68ff,
+  400 : #2647ff,
+  500 : #0027ff,
+  600 : #0023ff,
+  700 : #001dff,
+  800 : #0017ff,
+  900 : #000eff,
+  A100 : #ffffff,
+  A200 : #f2f3ff,
+  A400 : #bfc1ff,
+  A700 : #a6a7ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+
+$painel-purple: (
+  50 : #f8e0ff,
+  100 : #edb3ff,
+  200 : #e280ff,
+  300 : #d64dff,
+  400 : #cd26ff,
+  500 : #c400ff,
+  600 : #be00ff,
+  700 : #b600ff,
+  800 : #af00ff,
+  900 : #a200ff,
+  A100 : #ffffff,
+  //A200 : #faf2ff,
+  A200: #333333,
+  A400 : #e5bfff,
+  A700 : #daa6ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$safra-education-primary: mat-palette($painel-blue);
+$safra-education-accent: mat-palette($painel-purple, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$safra-education-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$safra-education-theme: mat-light-theme(
+  $safra-education-primary,
+  $safra-education-accent,
+  $safra-education-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($safra-education-theme);
+
+
+.dark-theme {
+
+  $painel-black-theme: (
+    50 : #f8e0ff,
+    100 : #edb3ff,
+    200 : #e280ff,
+    300 : #d64dff,
+    400 : #cd26ff,
+    500 : #c400ff,
+    600 : #be00ff,
+    700 : #b600ff,
+    800 : #af00ff,
+    900 : #a200ff,
+    A100 : #ffffff,
+    A200 : #faf2ff,
+    A400 : #e5bfff,
+    A700 : #daa6ff,
+    contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+    )
+  );
+
+  // $safra-education-primary: mat-palette($painel-blue);
+  $safra-education-accent: mat-palette($painel-black-theme, A200, A100, A400);
+
+    $dark-theme: mat-dark-theme(
+      $safra-education-primary,
+      $safra-education-accent,
+      $safra-education-warn
+    );
+    @include angular-material-theme($dark-theme);
+    color: white;
+}
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+    // color: black;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import "styles/layout.scss";
+@import "styles/colors.scss";
+
+* {
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: $light-background;
+}
+
+.card {
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+    background-color: $light-color;
+    border-radius: 0.4rem;
+}
+
+.space-top {
+    padding-top: 80px;
+}
+
+.form-group {
+    display: block;
+    width: 100%;
+}
+
+.mat-form-field {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.mat-slider-track-background,
+.mat-slider:hover .mat-slider-track-background {
+    background-color: rgba($color: #ffffff, $alpha: 0.4);    //
+}
+
+// .mat-pseudo-checkbox-checked, .mat-pseudo-checkbox-indeterminate, .mat-accent .mat-pseudo-checkbox-checked, .mat-accent .mat-pseudo-checkbox-indeterminate {
+//     background: #000000;
+// }

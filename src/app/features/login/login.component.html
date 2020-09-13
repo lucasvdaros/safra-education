@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="form-col">
+        <h1>Entrar</h1>
+        <form [formGroup]="loginForm" (submit)="login()">
+            <mat-form-field class="form-group">
+                <mat-label>E-mail</mat-label>
+                <input matInput formControlName="username">
+                <mat-error *ngIf="loginForm.get('username').errors?.required">
+                    Login é obrigatório
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-group">
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" formControlName="password" />
+                <mat-error *ngIf="loginForm.get('password').errors?.required">
+                    Senha é obrigatório
+                </mat-error>
+            </mat-form-field>
+            <button class="login-btn" mat-raised-button color="primary">
+                Entrar
+            </button>
+        </form>
+    </div>
+    <div class="logo-col">
+        <div class="logo">
+        </div>
+        <h1>Safra Educational</h1>
+    </div>
+</div>

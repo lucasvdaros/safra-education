@@ -1,0 +1,42 @@
+<div class="theme-wrapper" [class.dark-theme]="dark$ | async">
+  <aside class="side-bar" [class.open]="sideBarOpen" [class.close]="!sideBarOpen">
+    <div class="oc-button" (click)="sideBarOpen = !sideBarOpen">
+      <i-feather class="icon" name="chevron-right"></i-feather>
+    </div>
+    <nav class="bar-navigation">
+      <ul>
+        <li id="user">
+          <figure>
+            <div class="img"></div>
+            <span class="text"></span>           
+          </figure>
+        </li>
+        <li id="theme">
+          <div class="slider">
+            <div style="position: relative">
+              <mat-slide-toggle class="mat-slider-wrapper" (toggleChange)="toggleTheme()"
+                style="margin-left: auto; margin-right: auto; position: static;" [checked]="dark$ | async"
+                color="primary"></mat-slide-toggle>
+            </div>
+            <span class="text">Tema escuro</span>
+          </div>
+        </li>
+        <li *ngFor="let item of navItems">
+          <a [routerLink]="item.url" [class.active]="item.isActive">
+            <i-feather class="icon" [name]="item.iconName"></i-feather>
+            <span class="text">{{ item.title }}</span>
+          </a>
+        </li>
+        <li id="logout">
+          <button (click)="logout()">
+            <i-feather name="log-out" class="icon"></i-feather>
+            <span class="text">Sair</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
