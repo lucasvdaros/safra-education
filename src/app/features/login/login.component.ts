@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private themeService: ThemeService,
-    private authService: AuthService,    
+    private authService: AuthService,
     private router: Router
   ) { }
 
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
 
     const username = this.loginForm.get('username').value;
     const password = this.loginForm.get('password').value;
-    
+
     this.authService
       .authenticate(username, password)
       .subscribe(
@@ -56,6 +56,7 @@ export class LoginComponent implements OnInit {
       );
   }
 
-  logOut(): void {
+  receiveNews(): void {
+    this.router.navigate(['news']);
   }
 }

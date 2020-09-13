@@ -35,14 +35,8 @@
         display: block;
         width: 100%;
         margin-top: 0.8rem;
-        color: #e3b15a;
       }
     }
-  }
-
-  .news-btn{
-    margin-top: 4rem;
-    color: #e3b15a;
   }
 
   .login-esqueci{
@@ -51,8 +45,8 @@
 
   .btn-cols{
     display: grid;
-    grid-template-columns: 10fr repeat(5, 1fr);      
-    column-gap: 10px;
+    grid-template-columns: 10fr repeat(2, 1fr);      
+    //column-gap: 10px;
   }
 
   .logo-col {
@@ -92,5 +86,17 @@
       background-size: cover;
       position: relative;     
     }
+  }
+
+  .back-btn{
+    width: 30%;
+    margin-right: 8px;
+    color: #e3b15a;
+  }
+
+  .opt-btn{
+    width: 300%;
+    margin-left: -25px;
+    color: #e3b15a;
   }
 }

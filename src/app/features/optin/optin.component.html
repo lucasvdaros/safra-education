@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="form-col">
+        <h1>Insira seus dados</h1>
+        <form [formGroup]="optInForm" (submit)="optIn()">
+            <mat-form-field class="form-group">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="username">
+                <mat-error *ngIf="optInForm.get('username').errors?.required">
+                    Nome é obrigatório
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-group">
+                <mat-label>E-mail</mat-label>
+                <input matInput formControlName="useremail">
+                <mat-error *ngIf="optInForm.get('useremail').errors?.required">
+                    E-mail é obrigatório
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-group">
+                <mat-label>Telefone</mat-label>
+                <input matInput formControlName="userfone">                
+            </mat-form-field>              
+            <div class="btn-cols">
+                <button class="back-btn" mat-raised-button color="primary" (onclick)="onBack()">
+                    Voltar
+                </button>
+                <button class="opt-btn" mat-raised-button color="primary">
+                    Cadastre-se
+                </button>
+            </div>            
+        </form>        
+    </div>
+    <div class="logo-col">
+        <div class="logo">
+        </div>
+        <div class="bg-image">
+        </div>
+    </div>
+</div>

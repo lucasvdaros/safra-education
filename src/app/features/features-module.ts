@@ -6,11 +6,13 @@ import { FeaturesRoutingModule } from "./features-routing.module";
 import { SharedModule } from "../shared/shared.module";
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent} from './dashboard/dashboard.component';
+import { OptinComponent } from './optin/optin.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
-    DashboardComponent,  
+    DashboardComponent,
+    OptinComponent,  
   ],
   imports: [
     CommonModule,
