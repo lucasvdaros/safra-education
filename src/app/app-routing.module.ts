@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path: 'news',
     component: OptinComponent
-  },
+  },  
   {
     path: '',
     loadChildren: () => import('./base-layout/base-layout.module').then(m => m.BaseLayoutModule),

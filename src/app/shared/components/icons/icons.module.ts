@@ -6,7 +6,7 @@ import {
   ChevronRight, Inbox, User, UserPlus, Users, TrendingUp, Settings,
   LogOut, Plus, Search, Trash, Edit, ArrowLeft, Save, DownloadCloud,
   MessageCircle, Volume2, VolumeX, X, Menu, HelpCircle, Move, Home,
-  Calendar, Image, Film, FileText, Info, Send, Tv, Tag
+  Calendar, Image, Film, FileText, Info, Send, Tv, Tag, Youtube, Star, BookOpen
 } from 'angular-feather/icons';
 
 const icons  = {
@@ -40,7 +40,10 @@ const icons  = {
   Info,
   Send,
   Tv,
-  Tag
+  Tag,
+  Youtube,
+  Star,
+  BookOpen
 };
 
 @NgModule({

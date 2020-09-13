@@ -1,0 +1,19 @@
+.dates-form{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+.exemple-charts{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    column-gap: 20px;
+}
+
+.example-charts img{
+    display: flex;
+    height: 30px;
+    width: 30px;
+}
+

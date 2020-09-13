@@ -17,12 +17,40 @@ export class BaseLayoutComponent implements OnInit {
       id: 1,
       title: 'Inicio',
       iconName: 'home',
+      url: ['', '/dashboard'],
+      isActive: false
+    },
+    {
+      id: 2,
+      title: 'Cursos',
+      iconName: 'youtube',
       url: ['', '/'],
       isActive: false
-    },    
+    },
+    {
+      id: 3,
+      title: 'Tutoriais',
+      iconName: 'book-open',
+      url: ['', '/'],
+      isActive: false
+    },
+    {
+      id: 4,
+      title: 'Certificações',
+      iconName: 'star',
+      url: ['', '/'],
+      isActive: false
+    },
+    {
+      id: 5,
+      title: 'Chatbot',
+      iconName: 'message-circle',
+      url: ['', '/'],
+      isActive: false
+    },
   ];
 
-  sideBarOpen = false;  
+  sideBarOpen = false;
   dark$ = this.themeService.darkTheme$;
 
   constructor(
@@ -83,7 +111,7 @@ export class BaseLayoutComponent implements OnInit {
   }
 
   get navItems(): NavItem[] {
-    return this.allNavItems;    
+    return this.allNavItems;
   }
 
   private updateNavItems(navItems: NavItem[], newActiveItem: NavItem): NavItem[] {

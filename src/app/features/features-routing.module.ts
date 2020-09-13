@@ -8,6 +8,22 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent
   },
+  // {
+  //   path: 'videos',
+  //   component: DashboardComponent
+  // },
+  // {
+  //   path: '',
+  //   component: DashboardComponent
+  // },
+  // {
+  //   path: '',
+  //   component: DashboardComponent
+  // },
+  // {
+  //   path: '',
+  //   component: DashboardComponent
+  // },
 ];
 
 @NgModule({

@@ -1,0 +1,39 @@
+<div class="container">
+    <main class="space-top">
+        <h1>Faça sua simulação</h1>
+        <div class="dates-form">
+
+            <mat-form-field color="accent" appearance="fill" class="">
+                <mat-label>Início</mat-label>
+                <input matInput [matDatepicker]="picker1">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field color="accent" appearance="fill" class="">
+                <mat-label>Fim</mat-label>
+                <input matInput [matDatepicker]="picker2">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2 color="primary"></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="form-group">
+                <mat-label>Valor</mat-label>
+                <input matInput>               
+            </mat-form-field>
+
+            <mat-form-field class="form-group">
+                <mat-label>Ativo</mat-label>
+                <input matInput>               
+            </mat-form-field> 
+
+            <button class="search-btn" mat-raised-button color="primary">
+                Buscar
+            </button>
+        </div>
+        <div class="exemple-charts">
+            <img src="./../../../../../assets/img/exemplo-invest.jpg">
+            <img src="./../../../../../assets/img/exemplo-invest.jpg">
+        </div>            
+    </main>
+</div>

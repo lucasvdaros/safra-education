@@ -7,12 +7,18 @@ import { SharedModule } from "../shared/shared.module";
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent} from './dashboard/dashboard.component';
 import { OptinComponent } from './optin/optin.component';
+import { SimulatorComponent } from './dashboard/components/simulator/simulator.component';
+import { MorningCallsComponent } from './dashboard/components/morning-calls/morningcalls.component';
+import { CardMorningComponent } from './dashboard/components/card-morning/cardmorning.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     DashboardComponent,
-    OptinComponent,  
+    SimulatorComponent,
+    MorningCallsComponent,
+    OptinComponent,
+    CardMorningComponent,  
   ],
   imports: [
     CommonModule,
